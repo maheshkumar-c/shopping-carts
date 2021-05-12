@@ -1,4 +1,8 @@
-tools{
+pipeline
+{
+    agent any
+// uncomment the following lines by removing /* and */ to enable
+    tools{
        maven 'maven' 
     }
     
@@ -22,3 +26,12 @@ tools{
             }
         }
     }
+    
+    post{
+        always{
+            echo 'this pipeline has completed...'
+        }
+        
+    }
+    
+}
